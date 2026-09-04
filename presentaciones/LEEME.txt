@@ -1,0 +1,26 @@
+PRESENTACIONES DE VORTIX TECNOLOGÍAS
+====================================
+
+Archivos:
+- vortix-marketing.html ... Presentación 1: "Vortix Marketing".
+                            Beneficios de la marca y especialización
+                            en el mercado competitivo.
+- vortix-ejecutiva.html ... Presentación 2: Propuesta ejecutiva.
+                            Para clientes sin conocimientos técnicos,
+                            en lenguaje sencillo y visual atractivo.
+
+Cómo usarlas:
+1. Abre el archivo HTML en tu navegador (doble clic sobre él).
+2. Navega con las flechas ← → del teclado, con los puntos de abajo,
+   o deslizando el dedo en pantallas táctiles.
+3. Pulsa la tecla F para verla en pantalla completa.
+4. Para exportar a PDF: Ctrl+P (Cmd+P en Mac) y elige "Guardar como PDF".
+   Cada diapositiva ocupará una página.
+
+Notas:
+- Las imágenes y diagramas son gráficos vectoriales (SVG) integrados:
+  se ven nítidos en cualquier tamaño de pantalla.
+- Puedes editar textos, colores y datos directamente en los HTML.
+  Los estilos compartidos están en css/presentacion.css.
+- La identidad visual usa los colores y tipografías del sitio web
+  de Vortix Tecnologías (naval, cian y verde).
