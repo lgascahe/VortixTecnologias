@@ -1,0 +1,152 @@
+﻿<!doctype html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vortix Tecnologías · Propuesta Ejecutiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/presentacion.css">
+    <style>
+        .split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .comparison { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .comparison td, .comparison th { padding: 12px; border-bottom: 1px solid var(--line); text-align: left; }
+        .comparison th { color: var(--cyan); }
+        .bad { color: #ff6b6b; }
+        .good { color: var(--green); }
+        @media (max-width: 768px) { .split { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="progress" id="progress"></div>
+    <div class="deck" id="deck">
+        <!-- 1. PORTADA -->
+        <section class="slide active" data-title="Portada">
+            <div class="inner">
+                <span class="eyebrow">Propuesta Ejecutiva · Vortix Tecnologías</span>
+                <h1 class="title">Tu negocio enfocado en crecer.<br><span class="grad">Nosotros con la parte difícil.</span></h1>
+                <p class="lead">Sin tecnicismos, sin complicaciones. Una visión clara de cómo resolvemos tus problemas de infraestructura y software.</p>
+                <div class="actions">
+                    <button class="btn btn-cyan" onclick="next()">Ver el Problema</button>
+                    <a class="btn btn-wa" href="https://wa.me/524792269071">Agendar Llamada</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. EL PROBLEMA -->
+        <section class="slide" data-title="El Problema">
+            <div class="inner">
+                <div class="split">
+                    <div>
+                        <h2>El Caos Tecnológico</h2>
+                        <p>¿Sientes que tu tecnología es un freno en lugar de un motor?</p>
+                        <ul>
+                            <li>Sistemas lentos o caídos.</li>
+                            <li>Falta de claridad en los datos.</li>
+                            <li>Proveedores que no dan respuesta.</li>
+                        </ul>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 50%; text-align: center;">
+                        <span style="font-size: 80px;">⚡</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. LA SOLUCION -->
+        <section class="slide" data-title="La Solución">
+            <div class="inner">
+                <h2>Orden y Eficiencia</h2>
+                <p>Vortix entra para organizar el caos. Implementamos soluciones que funcionan en segundo plano para que tú te enfoques en tu cliente.</p>
+                <table class="comparison">
+                    <thead>
+                        <tr>
+                            <th>Situación Actual</th>
+                            <th>Con Vortix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bad">Parches constantes</td>
+                            <td class="good">Arquitectura robusta</td>
+                        </tr>
+                        <tr>
+                            <td class="bad">Incertidumbre</td>
+                            <td class="good">Control total y monitoreo</td>
+                        </tr>
+                        <tr>
+                            <td class="bad">Gasto sin retorno</td>
+                            <td class="good">Inversión escalable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 4. EL PROCESO -->
+        <section class="slide" data-title="Proceso">
+            <div class="inner">
+                <h2>Proceso de 4 Pasos</h2>
+                <div class="grid-3" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+                    <div class="card"><strong>1. Auditoría</strong><br><small>Entendemos tu estado actual.</small></div>
+                    <div class="card"><strong>2. Estrategia</strong><br><small>Diseñamos el camino óptimo.</small></div>
+                    <div class="card"><strong>3. Ejecución</strong><br><small>Implementamos sin interrumpir.</small></div>
+                    <div class="card"><strong>4. Soporte</strong><br><small>Te acompañamos siempre.</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CONTACTO -->
+        <section class="slide" data-title="Cierre">
+            <div class="inner" style="text-align: center;">
+                <h2>Decide hoy el futuro de tu empresa</h2>
+                <p class="lead">Estamos listos para ser tu equipo técnico de confianza.</p>
+                <div class="actions" style="justify-content: center; margin-top: 30px;">
+                    <a class="btn btn-cyan" href="https://wa.me/524792269071">Hablar con un experto</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="controls">
+        <button class="nav-btn" onclick="prev()">&#10094;</button>
+        <div class="dots" id="dots"></div>
+        <button class="nav-btn" onclick="next()">&#10095;</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dots');
+        const progress = document.getElementById('progress');
+        let current = 0;
+
+        function init() {
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.onclick = () => go(i);
+                dotsContainer.appendChild(dot);
+            });
+            update();
+        }
+
+        function update() {
+            slides.forEach((s, i) => s.classList.toggle('active', i === current));
+            document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+            progress.style.width = ((current + 1) / slides.length * 100) + '%';
+        }
+
+        function next() { if (current < slides.length - 1) { current++; update(); } }
+        function prev() { if (current > 0) { current--; update(); } }
+        function go(i) { current = i; update(); }
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight') next();
+            if (e.key === 'ArrowLeft') prev();
+        });
+
+        init();
+    </script>
+</body>
+</html>
