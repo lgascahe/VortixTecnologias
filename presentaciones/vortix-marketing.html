@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vortix Marketing Presentación de marca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/presentacion.css">
+</head>
+<body>
+    <div class="progress" id="progress"></div>
+    <div class="deck" id="deck">
+
+        <!-- 1. PORTADA -->
+        <section class="slide active" data-title="Portada">
+            <div class="inner stagger">
+                <span class="eyebrow">Vortix Tecnologías Marketing y Marca</span>
+                <h1 class="title">La energía que <span class="grad">acelera tu futuro.</span></h1>
+                <p class="lead"><center>Estrategia, diseño y tecnología unidos para crear marcas que no solo se ven bien, sino que dominan su mercado.<center/></p>
+                
+                <div class="actions">
+                    <button class="btn btn-cyan" onclick="next()">Empezar presentación</button>
+                    <a class="btn btn-ghost" href="vortix-ejecutiva.html">Ver Propuesta Ejecutiva</a>
+                </div>
+                
+                <!-- Visual Hero: V rtice animado -->
+                <div style="margin-top: 60px; position: relative;">
+                    <svg viewBox="0 0 300 300" width="280" height="280" style="max-width: 100%; filter: drop-shadow(0 0 20px rgba(0,210,255,0.3));">
+                        <defs>
+                            <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#00D2FF"/><stop offset="100%" stop-color="#00FF87"/>
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="2" result="col"/>
+                                <feMerge>
+                                    <feMergeNode in="col"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- Anillos orbitando -->
+                        <g stroke="url(#heroGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6">
+                            <circle cx="150" cy="150" r="120">
+                                <animateTransform attributeName="transform" type="rotate" from="0 150 150" to="360 150 150" dur="20s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="150" cy="150" r="90" stroke-dasharray="8 12">
+                                <animateTransform attributeName="transform" type="rotate" from="360 150 150" to="0 150 150" dur="15s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="150" cy="150" r="60" stroke-dasharray="4 8" opacity="0.4">
+                                <animateTransform attributeName="transform" type="rotate" from="0 150 150" to="360 150 150" dur="10s" repeatCount="indefinite"/>
+                            </circle>
+                        </g>
+                        <!-- Núcleo pulsante -->
+                        <circle cx="150" cy="150" r="35" fill="url(#heroGrad)" opacity="0.2">
+                            <animate attributeName="r" values="35;42;35" dur="3s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <text x="150" y="160" text-anchor="middle" fill="#fff" font-family="Montserrat,Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="0.1em">VORTIX</text>
+                    </svg>
+                </div>
+                <p style="margin-top: 20px; color: var(--cyan); font-family: Montserrat; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.05em;">Atraemos. Procesamos. Resolvemos.</p>
+            </div>
+        </section>
+
+        <!-- 2. EL MERCADO: EL RUIDO -->
+        <section class="slide" data-title="El Reto">
+            <div class="inner stagger">
+                <span class="eyebrow">Análisis de Mercado</span>
+                <h2>El Mercado es un <span class="grad">Ruido Constante</span></h2>
+                <p class="lead" style="max-width: 800px; margin: 0 auto;">La mayoría de empresas tecnológicas fallan al comunicar su valor. Se ahogan en tecnicismos o diseños genericos que no conectan.</p>
+                
+                <div class="grid-3" style="margin-top: 40px; text-align: left;">
+                    <div class="card" style="border-left: 3px solid #ff6b6b;">
+                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(255,107,107,0.15); display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        </div>
+                        <h3>Saturación</h3>
+                        <p>Miles de mensajes genéricos compitiendo por la misma atención. Tu voz se pierde en la multitud.</p>
+                    </div>
+                    <div class="card" style="border-left: 3px solid #ffd93d;">
+                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(255,217,61,0.15); display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffd93d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <h3>Desconexión</h3>
+                        <p>El marketing no entiende la tecnología y la tecnología no habla el lenguaje del negocio.</p>
+                    </div>
+                    <div class="card" style="border-left: 3px solid #6bcb77;">
+                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(107,203,119,0.15); display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6bcb77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3>Oportunidad Perdida</h3>
+                        <p>Sin narrativa clara, los leads calificados se escapan hacia competidores que comunican mejor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. POSICIONAMIENTO: LA MATRIZ -->
+        <section class="slide" data-title="Posicionamiento">
+            <div class="inner stagger">
+                <span class="eyebrow">Nuestra Diferencia</span>
+                <h2>Posicionamiento <span class="grad"> Único</span></h2>
+                <p class="lead"><center>No somos una agencia más. Ocúpamos el punto dulce donde la tecnología profunda se encuentra con la estrategia de marca.<center/></p>
+                
+                <div class="grid-3" style="margin-top: 40px; text-align: left;">
+                    <div class="card">
+                        <h3>Agencias Tradicionales</h3>
+                        <p style="color: var(--muted); margin-bottom: 20px;">Dise o bonito, pero vacío de sustancia técnica.</p>
+                        <ul style="font-size: 0.9rem; color: var(--muted); line-height: 2;">
+                            <li>-> Enfoque est tico  nicamente</li>
+                            <li>-> Desconocen arquitectura de software</li>
+                            <li>-> M tricas de vanidad (likes, vistas)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card featured">
+                        <div style="display:inline-block; padding: 4px 12px; border-radius: 20px; background: rgba(0,210,255,0.15); color: var(--cyan); font-size: 0.7rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em;">Nuestra Posición</div>
+                        <h3>Vortix Tecnologías</h3>
+                        <p style="color: var(--white); margin-bottom: 20px; font-weight: 500;">Hablamos el idioma de tus ingenieros y lo traducimos en crecimiento de negocio.</p>
+                        <ul style="font-size: 0.9rem; color: var(--muted); line-height: 2;">
+                            <li>-> Ingeniería + Marca unificadas</li>
+                            <li>-> Métricas de negocio reales (SQL, Pipeline, ARR)</li>
+                            <li>-> Contenido técnico que convierte</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Equipos Internos / Freelancers</h3>
+                        <p style="color: var(--muted); margin-bottom: 20px;">Ejecutan tareas, pero carecen de visión estratégica 360°.</p>
+                        <ul style="font-size: 0.9rem; color: var(--muted); line-height: 2;">
+                            <li>-> Falta de metodología probada</li>
+                            <li>-> Escalabilidad limitada</li>
+                            <li>-> Riesgo de silos operativos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. METODOLOGÍA: EL VÓRTICE -->
+        <section class="slide" data-title="Metodología">
+            <div class="inner stagger">
+                <span class="eyebrow">¿Cómo Lo Hacemos?</span>
+                <h2>Metodología: <span class="grad">El Vórtice</span></h2>
+                <p class="lead"><center>Un ciclo continuo de tres fases que transforma atención en resultados medibles.<center/></p>
+               
+			   <div class="grid-3" style="margin-top: 40px; text-align: center;">
+                    <!-- Paso 1 -->
+                    <div class="card" style="text-align: center; position: relative;">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 20px; background: linear-gradient(135deg, rgba(0,210,255,0.2), rgba(0,255,135,0.1)); display:flex; align-items:center; justify-content:center; border: 1px solid var(--line); position: relative;">
+                            <span style="font-size: 2.5rem; font-weight: 800; color: var(--cyan); font-family: Montserrat;">01</span>
+                            <div style="position:absolute; inset: -4px; border-radius: 24px; border: 1px solid var(--cyan); opacity: 0.3; animation: pulseRing 3s ease-out infinite;"></div>
+                        </div>
+                        <h3 style="color: var(--cyan);">Atracción</h3>
+                        <p>Identificamos y captamos la atención de tu mercado ideal mediante posicionamiento SEO técnico, contenido de autoridad y brand awareness estratégico.</p>
+                    </div>
+                    
+                    <!-- Paso 2 -->
+                    <div class="card" style="text-align: center;">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 20px; background: linear-gradient(135deg, rgba(0,210,255,0.2), rgba(0,255,135,0.1)); display:flex; align-items:center; justify-content:center; border: 1px solid var(--line);">
+                            <span style="font-size: 2.5rem; font-weight: 800; color: var(--cyan); font-family: Montserrat;">02</span>
+                        </div>
+                        <h3 style="color: var(--cyan);">Procesamiento</h3>
+                        <p>Nutrimos y calificamos el interés con automatizaciones inteligentes, lead scoring y nurturing personalizado. Filtramos ruido, entregamos oportunidades.</p>
+                    </div>
+                    
+                    <!-- Paso 3 -->
+                    <div class="card" style="text-align: center;">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 20px; background: linear-gradient(135deg, rgba(0,210,255,0.2), rgba(0,255,135,0.1)); display:flex; align-items:center; justify-content:center; border: 1px solid var(--line);">
+                            <span style="font-size: 2.5rem; font-weight: 800; color: var(--cyan); font-family: Montserrat;">03</span>
+                        </div>
+                        <h3 style="color: var(--cyan);">Conversión</h3>
+                        <p>Cerramos el ciclo: habilitación de ventas, ABM, reporting de atribución y optimización continua. Resultados que impactan el EBITDA.</p>
+                    </div>
+                </div>
+                
+                <style>
+                @keyframes pulseRing { 0% { transform: scale(1); opacity: 0.3; } 100% { transform: scale(1.15); opacity: 0; } }
+                </style>
+            </div>
+        </section>
+
+        <!-- 5. EXCELENCIA OPERATIVA -->
+        <section class="slide" data-title="Excelencia CMMI">
+            <div class="inner stagger">
+                <span class="eyebrow">Nuestro Valor Agregado</span>
+                <h2>Excelencia <span class="grad">Operativa</span></h2>
+                <p class="lead">Creatividad de marketing con el rigor del software certificado.</p>
+                <div class="grid-2" style="margin-top: 40px;">
+                    <div class="card">
+                        <h3>Certificación CMMI</h3>
+                        <p>Aseguramos calidad y previsibilidad en cada entrega, minimizando riesgos y optimizando procesos.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Soluciones Blockchain</h3>
+                        <p>Tecnología descentralizada para transparencia, seguridad y nuevas formas de valor digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. EVIDENCIA / CASOS -->
+        <section class="slide" data-title="Resultados">
+            <div class="inner stagger">
+                <span class="eyebrow">Evidencia</span>
+                <h2>Resultados que <span class="grad">Hablan</span></h2>
+                <p class="lead">No vendemos humo. Entregamos métricas que importan a la dirección.</p>
+                
+                <div class="grid-4" style="margin-top: 40px; text-align: center;">
+                    <div class="card" style="background: linear-gradient(145deg, rgba(0,210,255,0.08), transparent);">
+                        <div style="font-size: 3rem; font-weight: 800; color: var(--cyan); font-family: Montserrat; line-height: 1;">3.2x</div>
+                        <div style="color: var(--muted); margin-top: 8px; font-weight: 500;">ROAS Promedio</div>
+                        <div style="font-size: 0.8rem; color: var(--green); margin-top: 4px;">vs 1.2x sector</div>
+                    </div>
+                    <div class="card" style="background: linear-gradient(145deg, rgba(0,255,135,0.08), transparent);">
+                        <div style="font-size: 3rem; font-weight: 800; color: var(--green); font-family: Montserrat; line-height: 1;">-47%</div>
+                        <div style="color: var(--muted); margin-top: 8px; font-weight: 500;">CAC Reducido</div>
+                        <div style="font-size: 0.8rem; color: var(--green); margin-top: 4px;">en 6 meses</div>
+                    </div>
+                    <div class="card" style="background: linear-gradient(145deg, rgba(255,217,61,0.08), transparent);">
+                        <div style="font-size: 3rem; font-weight: 800; color: #ffd93d; font-family: Montserrat; line-height: 1;">+89%</div>
+                        <div style="color: var(--muted); margin-top: 8px; font-weight: 500;">SQL Generados</div>
+                        <div style="font-size: 0.8rem; color: var(--green); margin-top: 4px;">QoQ crecimiento</div>
+                    </div>
+                    <div class="card" style="background: linear-gradient(145deg, rgba(255,107,107,0.08), transparent);">
+                        <div style="font-size: 3rem; font-weight: 800; color: #ff6b6b; font-family: Montserrat; line-height: 1;">92%</div>
+                        <div style="color: var(--muted); margin-top: 8px; font-weight: 500;">Retención Cliente</div>
+                        <div style="font-size: 0.8rem; color: var(--green); margin-top: 4px;">a 12 meses</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CIERRE -->
+        <section class="slide" data-title="Cierre">
+            <div class="inner stagger" style="text-align: center;">
+                <span class="eyebrow">Próximo Paso</span>
+                <h2> Evolucionamos <span class="grad">Juntos?</span></h2>
+                <p class="lead">Vortix no es solo un nombre, es el impulso que tu empresa necesita para dejar de competir y empezar a liderar.</p>
+                
+                <div class="actions" style="justify-content: center; margin-top: 40px;">
+                    <a class="btn btn-cyan" href="https://wa.me/524792269071?text=Hola%2C%20vi%20la%20presentaci%C3%B3n%20de%20marketing%20de%20Vortix%20y%20quiero%20agendar%20una%20llamada" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        Agendar Diagnóstico Gratis
+                    </a>
+                    <a class="btn btn-ghost" href="vortix-ejecutiva.html">Ver Propuesta Ejecutiva</a>
+                </div>
+                
+                <p style="margin-top: 40px; color: var(--muted); font-size: 0.85rem;">Vortix Tecnolog as   2026   <a href="index.html" style="color: var(--cyan);">vortixtecnologias.com</a></p>
+            </div>
+        </section>
+    </div>
+
+    <div class="controls">
+        <button class="nav-btn" onclick="prev()" aria-label="Anterior">&#10094;</button>
+        <div class="dots" id="dots"></div>
+        <button class="nav-btn" onclick="next()" aria-label="Siguiente">&#10095;</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dots');
+        const progress = document.getElementById('progress');
+        let current = 0;
+        const total = slides.length;
+
+        function init() {
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.onclick = () => go(i);
+                dotsContainer.appendChild(dot);
+            });
+            update();
+        }
+
+        function update() {
+            slides.forEach((s, i) => s.classList.toggle('active', i === current));
+            document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+            progress.style.transform = `scaleX(${(current + 1) / total})`;
+        }
+
+        function next() { if (current < total - 1) { current++; update(); } }
+        function prev() { if (current > 0) { current--; update(); } }
+        function go(i) { current = i; update(); }
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight') next();
+            if (e.key === 'ArrowLeft') prev();
+        });
+
+        // Touch swipe support
+        let touchStartX = 0;
+        document.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+        document.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+        });
+
+        init();
+    </script>
+</body>
+</html>

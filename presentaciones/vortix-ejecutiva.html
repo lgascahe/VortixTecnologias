@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vortix Tecnologías - Propuesta Ejecutiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/presentacion.css">
+</head>
+<body>
+    <div class="progress" id="progress"></div>
+    <div class="deck" id="deck">
+
+        <!-- 1. PORTADA EJECUTIVA -->
+        <section class="slide active" data-title="Portada">
+            <div class="inner stagger">
+                <span class="eyebrow">Propuesta Ejecutiva - Vortix Tecnologías</span>
+                <h1 class="title">Tu negocio enfocado en crecer.<br><span class="grad">Nosotros con la parte difícil.</span></h1>
+                <p class="lead"><center>Sin tecnicismos, sin complicaciones. Una visión clara de cómo resolvemos tus problemas de infraestructura, software y automatización.<center/></p>
+                
+                <div class="actions">
+                    <button class="btn btn-cyan" onclick="next()">Ver el Problema</button>
+                    <a class="btn btn-wa" href="https://wa.me/524792269071?text=Hola%2C%20vi%20la%20propuesta%20ejecutiva%20de%20Vortix%20y%20quiero%20agendar%20una%20videollamada" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.4z"/></svg>
+                        Agendar Videollamada
+                    </a>
+                </div>
+                
+                <!-- Visual: Order from Chaos -->
+                <div style="margin-top: 60px; position: relative; height: 200px;">
+                    <svg viewBox="0 0 400 200" width="100%" height="200" style="max-width: 400px;">
+                        <defs>
+                            <linearGradient id="execGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#ff6b6b"/><stop offset="50%" stop-color="#ffd93d"/><stop offset="100%" stop-color="#00ff87"/>
+                            </linearGradient>
+                            <filter id="blurGlass">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+                            </filter>
+                        </defs>
+                        <!-- Caos (izquierda) -->
+                        <g id="chaosGroup" filter="url(#blurGlass)">
+                            <rect x="20" y="20" width="160" height="160" rx="20" fill="rgba(255,107,107,0.1)" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="8 4"/>
+                            <g stroke="#ff6b6b" stroke-width="1.5" fill="none" opacity="0.6">
+                                <path d="M40 60 Q 80 40 120 70 T 160 50" >
+                                    <animateTransform attributeName="transform" type="translate" values="0,0; 10,-5; 0,0; -5,5; 0,0" dur="2s" repeatCount="indefinite"/>
+                                </path>
+                                <path d="M50 100 Q 90 120 130 90 T 170 110" >
+                                    <animateTransform attributeName="transform" type="translate" values="0,0; -8,3; 0,0; 5,-4; 0,0" dur="2.5s" repeatCount="indefinite"/>
+                                </path>
+                                <path d="M60 140 Q 100 160 140 130 T 180 150" >
+                                    <animateTransform attributeName="transform" type="translate" values="0,0; 5,-8; 0,0; -3,6; 0,0" dur="3s" repeatCount="indefinite"/>
+                                </path>
+                            </g>
+                            <text x="100" y="190" text-anchor="middle" fill="#ff6b6b" font-family="Montserrat" font-size="12" font-weight="700" letter-spacing="0.1em">CAOS</text>
+                        </g>
+                        
+                        <!-- Flecha transformadora -->
+                        <g transform="translate(190, 100)">
+                            <path d="M-30 0 L30 0 M20 -10 L30 0 L20 10" stroke="url(#execGrad)" stroke-width="3" fill="none" stroke-linecap="round">
+                                <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="2s" repeatCount="indefinite"/>
+                            </path>
+                            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+                        </g>
+                        
+                        <!-- Orden (derecha) -->
+                        <g id="orderGroup">
+                            <rect x="220" y="20" width="160" height="160" rx="20" fill="rgba(0,255,135,0.1)" stroke="#00ff87" stroke-width="2"/>
+                            <g stroke="#00ff87" stroke-width="2" fill="none" opacity="0.8">
+                                <line x1="240" y1="60" x2="360" y2="60">
+                                    <animate attributeName="stroke-dashoffset" from="120" to="0" dur="1.5s" repeatCount="indefinite"/>
+                                    <animate attributeName="stroke-dasharray" values="0,120; 60,60; 120,0" dur="1.5s" repeatCount="indefinite"/>
+                                </line>
+                                <line x1="240" y1="100" x2="360" y2="100" style="animation-delay: 0.3s;">
+                                    <animate attributeName="stroke-dashoffset" from="120" to="0" dur="1.5s" repeatCount="indefinite"/>
+                                    <animate attributeName="stroke-dasharray" values="0,120; 60,60; 120,0" dur="1.5s" repeatCount="indefinite"/>
+                                </line>
+                                <line x1="240" y1="140" x2="360" y2="140" style="animation-delay: 0.6s;">
+                                    <animate attributeName="stroke-dashoffset" from="120" to="0" dur="1.5s" repeatCount="indefinite"/>
+                                    <animate attributeName="stroke-dasharray" values="0,120; 60,60; 120,0" dur="1.5s" repeatCount="indefinite"/>
+                                </line>
+                            </g>
+                            <text x="300" y="190" text-anchor="middle" fill="#00ff87" font-family="Montserrat" font-size="12" font-weight="700" letter-spacing="0.1em">ORDEN</text>
+                        </g>
+                    </svg>
+                </div>
+                <p style="margin-top: 20px; color: var(--cyan); font-family: Montserrat; font-weight: 700; font-size: 1.1rem;">Simple � Claro � Acompa�ado</p>
+            </div>
+        </section>
+
+        <!-- 2. EL PROBLEMA: CAOS TECNOLÓGICO -->
+        <section class="slide" data-title="El Problema">
+            <div class="inner stagger">
+                <span class="eyebrow">Diagnóstico</span>
+                <h2>El <span class="grad">Caos Tecnológico</span> Frena tu Crecimiento</h2>
+                <p class="lead" style="max-width: 800px; margin: 0 auto;">La tecnología debería ser tu motor, no tu freno. Pero la realidad en muchas empresas es muy distinta.</p>
+                
+                <div class="grid-3" style="margin-top: 40px; text-align: left;">
+                    <div class="card" style="border-top: 3px solid #ff6b6b;">
+                        <h3>Inestabilidad Operativa</h3>
+                        <ul style="color: var(--muted); line-height: 2; font-size: 0.95rem; margin-top: 12px;">
+                            <li>-> Caídas de servicio no planificadas</li>
+                            <li>-> Tiempos de respuesta lentos</li>
+                            <li>-> Falta de observabilidad real</li>
+                        </ul>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line);">
+                            <span style="font-size: 2rem; font-weight: 800; color: #ff6b6b; font-family: Montserrat;">$0</span>
+                            <span style="color: var(--muted); margin-left: 8px;">ROI en parches</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="border-top: 3px solid #ffd93d;">
+                        <h3>Deuda Técnica Oculta</h3>
+                        <ul style="color: var(--muted); line-height: 2; font-size: 0.95rem; margin-top: 12px;">
+                            <li>-> Arquitecturas frágiles y acopladas</li>
+                            <li>-> Documentación inexistente</li>
+                            <li>-> Dependencia de personas clave (Bus Factor = 1)</li>
+                        </ul>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line);">
+                            <span style="font-size: 2rem; font-weight: 800; color: #ffd93d; font-family: Montserrat;">3.2x</span>
+                            <span style="color: var(--muted); margin-left: 8px;">Costo de arreglar después</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="border-top: 3px solid #00d2ff;">
+                        <h3>Desalineación Estratégica</h3>
+                        <ul style="color: var(--muted); line-height: 2; font-size: 0.95rem; margin-top: 12px;">
+                            <li>-> TI visto como centro de costo, no de valor</li>
+                            <li>-> Proveedores que no entienden tu negocio</li>
+                            <li>-> Decisiones reactivas, no proactivas</li>
+                        </ul>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line);">
+                            <span style="font-size: 2rem; font-weight: 800; color: var(--cyan); font-family: Montserrat;">68%</span>
+                            <span style="color: var(--muted); margin-left: 8px;">de proyectos TI fallan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. LA SOLUCIÓN: ORDEN Y EFICIENCIA -->
+        <section class="slide" data-title="La Solución">
+            <div class="inner stagger">
+                <span class="eyebrow">Nuestra Propuesta</span>
+                <h2>Orden, Control y <span class="grad">Escalabilidad</span></h2>
+                <p class="lead"><center>Vortix entra para organizar el caos. Implementamos arquitectura robusta, automatización y gobernanza para que tú te enfoques 100% en tu cliente.<center/></p>
+                
+                <div style="margin-top: 40px; overflow-x: auto;">
+                    <table class="comparison">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Situación Actual (Caos)</th>
+                                <th style="width: 15%; text-align: center;"></th>
+                                <th style="width: 45%;">Con Vortix (Orden)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="bad">Infraestructura reactiva y frágil</td>
+                                <td style="text-align: center; color: var(--cyan); font-size: 1.5rem;">|</td>
+                                <td class="good">Arquitectura Cloud Native resiliente (Multi-AZ, Auto-scaling)</td>
+                            </tr>
+                            <tr>
+                                <td class="bad">Despliegues manuales, lentos y riesgosos</td>
+                                <td style="text-align: center; color: var(--cyan); font-size: 1.5rem;">|</td>
+                                <td class="good">CI/CD Zero-Downtime + Feature Flags + Rollback instantáneo</td>
+                            </tr>
+                                <tr>
+                                <td class="bad">Caja negra: sin visibilidad de costos ni performance</td>
+                                <td style="text-align: center; color: var(--cyan); font-size: 1.5rem;">|</td>
+                                <td class="good">Observabilidad 360°: Logs, Métricas, Traces, Costos en tiempo real</td>
+                            </tr>
+                            <tr>
+                                <td class="bad">Seguridad como parche posterior</td>
+                                <td style="text-align: center; color: var(--cyan); font-size: 1.5rem;">|</td>
+                                <td class="good">DevSecOps integrado: SAST/DAST, Compliance, Zero Trust</td>
+                            </tr>
+                            <tr>
+                                <td class="bad">Equipo interno saturado en mantenimiento (Keep the lights on)</td>
+                                <td style="text-align: center; color: var(--cyan); font-size: 1.5rem;">|</td>
+                                <td class="good">Tu equipo innova; nosotros operamos y automatizamos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card featured" style="margin-top: 30px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <h3 style="color: var(--white);">Resultado: <span class="grad">Tecnología que escala contigo</span></h3>
+                    <p style="color: var(--muted); margin-top: 8px;">De "Apagar incendios" a "Construir el futuro". Predecible, Medible y Rentable.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROCESO DE 4 PASOS -->
+        <section class="slide" data-title="Proceso">
+            <div class="inner stagger">
+                <span class="eyebrow">¿Cómo Trabajamos?</span>
+                <h2>Proceso <span class="grad">Probado en 4 Fases</span></h2>
+                <p class="lead"><center>Metodología diseñada para cero interrupción y máximo impacto desde el día 1.<center/></p>
+                
+                <div class="grid-4" style="margin-top: 40px; position: relative;">
+                    <!-- L�nea conector visual -->
+                    <div style="position: absolute; top: 50px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, transparent, var(--cyan), transparent); z-index: 0;"></div>
+                    
+                    <div class="card" style="text-align: center; position: relative; z-index: 1;">
+                        <div style="width: 64px; height: 64px; margin: 0 auto 20px; border-radius: 16px; background: linear-gradient(135deg, var(--cyan), var(--green)); display:flex; align-items:center; justify-content:center; font-family: Montserrat; font-weight: 800; font-size: 1.5rem; color: var(--navy); box-shadow: 0 0 30px rgba(0,210,255,0.4);">01</div>
+                        <h3 style="color: var(--cyan);">Auditoría Profunda</h3>
+                        <p>Inventario de activos, an�lisis de arquitectura, seguridad, costos y madurez DevOps. Entregamos reporte ejecutivo con hallazgos y prioridades.</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center; position: relative; z-index: 1;">
+                        <div style="width: 64px; height: 64px; margin: 0 auto 20px; border-radius: 16px; background: linear-gradient(135deg, var(--cyan), var(--green)); display:flex; align-items:center; justify-content:center; font-family: Montserrat; font-weight: 800; font-size: 1.5rem; color: var(--navy);">02</div>
+                        <h3 style="color: var(--cyan);">Estrategia y Roadmap</h3>
+                        <p>Diseñamos la hoja de ruta técnica alineada a tus OKRs: migración, modernización, automatización. Quick wins + visión long-term.</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center; position: relative; z-index: 1;">
+                        <div style="width: 64px; height: 64px; margin: 0 auto 20px; border-radius: 16px; background: linear-gradient(135deg, var(--cyan), var(--green)); display:flex; align-items:center; justify-content:center; font-family: Montserrat; font-weight: 800; font-size: 1.5rem; color: var(--navy);">03</div>
+                        <h3 style="color: var(--cyan);">Ejecución Guiada</h3>
+                        <p>Implementamos en sprints: Infra as Code, Pipelines, Refactoring, Migración. Tú apruebas hitos; nosotros entregamos.</p>
+                    </div>
+                    
+                    <div class="card" style="text-align: center; position: relative; z-index: 1;">
+                        <div style="width: 64px; height: 64px; margin: 0 auto 20px; border-radius: 16px; background: linear-gradient(135deg, var(--cyan), var(--green)); display:flex; align-items:center; justify-content:center; font-family: Montserrat; font-weight: 800; font-size: 1.5rem; color: var(--navy);">04</div>
+                        <h3 style="color: var(--cyan);">Soporte y Evolución</h3>
+                        <p>Operación 24/7, FinOps continuo, Mejora continua, Capacitación de tu equipo. Somos tu socio técnico a largo plazo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. DIFERENCIADORES CLAVE -->
+        <section class="slide" data-title="¿Por qué Vortix?">
+            <div class="inner stagger">
+                <span class="eyebrow">Diferenciadores</span>
+                <h2>¿Por qué líderes eligen <span class="grad">Vortix?</span></h2>
+                <p class="lead"><center>No vendemos horas. Entregamos resultados de negocio mediante excelencia técnica.<center/></p>
+                
+                <div class="grid-2" style="margin-top: 40px; text-align: left;">
+                    <div class="card">
+                        <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+                            <div style="width:40px;height:40px;border-radius:10px;background:rgba(0,210,255,0.15);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                            <strong style="color:var(--cyan); font-size:1.1rem;">Seniority Real</strong>
+                        </div>
+                        <p>No juniors supervisados. Arquitectos y SREs con 10+ años en banca, retail, healthtech y scale-ups. Hemos estado en tus zapatos.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+                            <div style="width:40px;height:40px;border-radius:10px;background:rgba(0,255,135,0.15);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                            <strong style="color:var(--green); font-size:1.1rem;">Outcome-Based</strong>
+                        </div>
+                        <p>KPIs acordados: Uptime 99.9%, Deploy frequency, MTTR < 15min, Cloud spend optimization > 20%. Si no cumplimos, no cobramos el bonus.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+                            <div style="width:40px;height:40px;border-radius:10px;background:rgba(255,217,61,0.15);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffd93d" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                            <strong style="color:#ffd93d; font-size:1.1rem;">Time-to-Value</strong>
+                        </div>
+                        <p>Primeros resultados medibles en Sprint 1 (Semana 2). Quick wins de infra y automatización que liberan capacidad inmediata.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+                            <div style="width:40px;height:40px;border-radius:10px;background:rgba(255,107,107,0.15);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="2.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg></div>
+                            <strong style="color:#ff6b6b; font-size:1.1rem;">Excelencia CMMI & Blockchain</strong>
+                        </div>
+                        <p>Gobernanza, compliance, disaster recovery y security by design desde el día 0. Dormimos tranquilos para que tú también.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CIERRE EJECUTIVO -->
+        <section class="slide" data-title="Cierre">
+            <div class="inner stagger" style="text-align: center;">
+                <span class="eyebrow">Decisión</span>
+                <h2>Decide hoy el futuro tecnológico de tu empresa</h2>
+                <p class="lead">Cada día sin arquitectura sólida es deuda que pagas con intereses. Vortix es tu partner para transformar TI en ventaja competitiva.</p>
+                
+                <div class="card featured" style="max-width: 600px; margin: 40px auto 0; text-align: left;">
+                    <h3 style="color: var(--white); margin-bottom: 16px;">¿Qué incluye la primera conversación? (30 min, sin costo):</h3>
+                    <ul style="color: var(--muted); line-height: 2.2; font-size: 1rem;">
+                        <li>* Diagnóstico rápido de madurez tecnológica</li>
+                        <li>* Identificación de 3 Quick Wins de alto impacto</li>
+                        <li>* Estimación de ahorro de costos (FinOps)</li>
+                        <li>* Roadmap preliminar 90/180/365 días</li>
+                    </ul>
+                </div>
+                
+                <div class="actions" style="justify-content: center; margin-top: 40px;">
+                    <a class="btn btn-cyan" href="https://wa.me/524792269071?text=Hola%2C%20vi%20la%20propuesta%20ejecutiva%20de%20Vortix%20y%20quiero%20agendar%20una%20videollamada" target="_blank" style="padding: 18px 40px; font-size: 1.05rem;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        Agendar Videollamada Estratégica
+                    </a>
+                </div>
+                
+                <p style="margin-top: 40px; color: var(--muted); font-size: 0.85rem;">Vortix Tecnologías � 2026 � <a href="index.html" style="color: var(--cyan);">vortixtecnologias.com</a></p>
+            </div>
+        </section>
+    </div>
+
+    <div class="controls">
+        <button class="nav-btn" onclick="prev()" aria-label="Anterior">&#10094;</button>
+        <div class="dots" id="dots"></div>
+        <button class="nav-btn" onclick="next()" aria-label="Siguiente">&#10095;</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dots');
+        const progress = document.getElementById('progress');
+        let current = 0;
+        const total = slides.length;
+
+        function init() {
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.onclick = () => go(i);
+                dotsContainer.appendChild(dot);
+            });
+            update();
+        }
+
+        function update() {
+            slides.forEach((s, i) => s.classList.toggle('active', i === current));
+            document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+            progress.style.transform = `scaleX(${(current + 1) / total})`;
+        }
+
+        function next() { if (current < total - 1) { current++; update(); } }
+        function prev() { if (current > 0) { current--; update(); } }
+        function go(i) { current = i; update(); }
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight') next();
+            if (e.key === 'ArrowLeft') prev();
+        });
+
+        let touchStartX = 0;
+        document.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+        document.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+        });
+
+        init();
+    </script>
+</body>
+</html>
